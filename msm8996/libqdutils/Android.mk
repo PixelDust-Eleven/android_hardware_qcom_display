@@ -8,7 +8,7 @@ LOCAL_MODULE_TAGS             := optional
 LOCAL_HEADER_LIBRARIES        := libhardware_headers
 LOCAL_SHARED_LIBRARIES        := $(common_libs) libui libbinder libqservice
 LOCAL_C_INCLUDES              := $(common_includes) $(kernel_includes)
-LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdutils\" -Wno-sign-conversion
+LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdutils\" -Werror -Wno-sign-conversion -Wno-float-conversion
 LOCAL_CLANG                   := true
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
 LOCAL_EXPORT_C_INCLUDE_DIRS   := $(LOCAL_PATH)
@@ -25,7 +25,7 @@ LOCAL_SHARED_LIBRARIES          := liblog libcutils
 LOCAL_C_INCLUDES                := $(common_includes)
 LOCAL_ADDITIONAL_DEPENDENCIES   := $(common_deps)
 LOCAL_SRC_FILES                 := qdMetaData.cpp
-LOCAL_CFLAGS                    := $(common_flags) -Wno-sign-conversion
+LOCAL_CFLAGS                    := $(common_flags) -Wno-sign-conversion -Wno-float-conversion
 LOCAL_CFLAGS                    += -DLOG_TAG=\"DisplayMetaData\"
 LOCAL_CLANG                     := true
 LOCAL_MODULE_TAGS               := optional

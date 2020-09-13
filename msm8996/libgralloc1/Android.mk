@@ -20,7 +20,7 @@ LOCAL_C_INCLUDES              := $(common_includes) \
 LOCAL_HEADER_LIBRARIES        := libhardware_headers
 LOCAL_EXPORT_HEADER_LIBRARY_HEADERS := libhardware_headers liblog_headers
 LOCAL_SHARED_LIBRARIES        := $(common_libs) libqdMetaData libsync
-LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdgralloc\" -fPIC -Wall -std=c++11 -Werror
+LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdgralloc\" -fPIC -Wall -std=c++11 -Werror -Wno-sign-conversion -Wno-float-conversion
 LOCAL_CLANG                   := true
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps) $(kernel_deps)
 LOCAL_SRC_FILES               := gr_utils.cpp \
